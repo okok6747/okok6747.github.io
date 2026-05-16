@@ -1,0 +1,48 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+  <meta charset="UTF-8">
+  <meta name="viewport" content="width=device-width, initial-scale=1.0">
+  <title>Blank Page</title>
+  <style>
+    body {
+      margin: 0;
+      background: white;
+      overflow: hidden;
+      font-family: Arial, sans-serif;
+    }
+
+    #hiddenInput {
+      position: fixed;
+      top: -100px;
+      opacity: 0;
+    }
+  </style>
+</head>
+<body>
+
+<input type="text" id="hiddenInput" autocomplete="off">
+
+<script>
+  const secretWord = "bdasset";
+  const openURL = "https://example.com"; // CHANGE THIS
+
+  let typed = "";
+
+  document.addEventListener("keydown", (e) => {
+    typed += e.key.toLowerCase();
+
+    if (typed.length > secretWord.length) {
+      typed = typed.slice(-secretWord.length);
+    }
+
+    if (typed === secretWord) {
+      window.open(openURL, "_blank");
+      typed = "";
+    }
+  });
+</script>
+
+</body>
+</html>
+
