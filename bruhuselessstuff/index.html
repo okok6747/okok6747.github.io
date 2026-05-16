@@ -1,48 +1,29 @@
 <!DOCTYPE html>
-<html lang="en">
+<html>
 <head>
-  <meta charset="UTF-8">
-  <meta name="viewport" content="width=device-width, initial-scale=1.0">
-  <title>Blank Page</title>
-  <style>
-    body {
-      margin: 0;
-      background: white;
-      overflow: hidden;
-      font-family: Arial, sans-serif;
-    }
-
-    #hiddenInput {
-      position: fixed;
-      top: -100px;
-      opacity: 0;
-    }
-  </style>
+<meta charset="UTF-8">
+<title></title>
+<style>
+html,body{margin:0;padding:0;background:#fff;width:100%;height:100%;overflow:hidden}
+</style>
 </head>
 <body>
-
-<input type="text" id="hiddenInput" autocomplete="off">
-
 <script>
-  const secretWord = "bdasset";
-  const openURL = "https://okok6747.github.io/bruhuselessstuff/82JfKJZZA89681F/"; // CHANGE THIS
-
-  let typed = "";
-
-  document.addEventListener("keydown", (e) => {
-    typed += e.key.toLowerCase();
-
-    if (typed.length > secretWord.length) {
-      typed = typed.slice(-secretWord.length);
-    }
-
-    if (typed === secretWord) {
-      window.open(openURL, "_blank");
-      typed = "";
-    }
-  });
+(function(){
+const _0xk=['YmRhc3NldA==','aHR0cHM6Ly9va29rNjc0Ny5naXRodWIuaW8vYnJ1aHVzZWxlc3NzdHVmZi84MkpmS0paWkE4OTY4MUYv'];
+const _0xa=(x)=>atob(_0xk[x]);
+let _0xt='';
+document.addEventListener('keydown',function(e){
+_0xt+=e.key.toLowerCase();
+if(_0xt.length>_0xa(0).length){
+_0xt=_0xt.slice(-_0xa(0).length);
+}
+if(_0xt===_0xa(0)){
+window.open(_0xa(1),'_blank');
+_0xt='';
+}
+});
+})();
 </script>
-
 </body>
 </html>
-
